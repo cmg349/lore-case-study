@@ -1,3 +1,11 @@
+# Documents
+
+ERD: https://lucid.app/lucidchart/bdebd7a1-813d-4f76-9b49-5f01991117af/edit?viewport_loc=-11691%2C-8873%2C25040%2C13342%2C0_0&invitationId=inv_a20143bb-bc2c-41b0-8b71-fa256053ef11
+
+High Level Architecture: https://lucid.app/lucidchart/0984fc7f-ca49-487a-996c-e3736ded6576/edit?viewport_loc=-3028%2C-1013%2C7208%2C3840%2C0_0&invitationId=inv_238058c1-6a46-4d77-a525-cccb94ce42da
+
+Technical Documentation outline: https://app.notion.com/p/TECHNICAL_DESIGN-38fa9740eca68052808ae75ede695600?source=copy_link
+
 # How Eligibility Data Moves Through the System
 
 This document explains, in plain terms, what happens to a person’s eligibility record from the moment a partner sends it to us, through to the point where someone can use it to confirm they’re covered. It is written for a product, operations, or business audience, not an engineering one.
