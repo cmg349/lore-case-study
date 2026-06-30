@@ -21,19 +21,19 @@ export PGUSER=postgres
 export PGPASSWORD=
 
 # Apply all migrations
-python sql-data-mapping/database/deploy.py
+python sql-data-mapping/database/migrate.py
 
 # Check status
-python sql-data-mapping/database/deploy.py --status
+python sql-data-mapping/database/migrate.py --status
 
 # Dry run
-python sql-data-mapping/database/deploy.py --dry-run
+python sql-data-mapping/database/migrate.py --dry-run
 
 # Roll back last migration
-python sql-data-mapping/database/deploy.py --rollback
+python sql-data-mapping/database/migrate.py --rollback
 
 # Roll back to a specific point
-python sql-data-mapping/database/deploy.py --target 011
+python sql-data-mapping/database/migrate.py --target 011
 ```
 -------------------------------
 
