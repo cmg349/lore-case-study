@@ -18,7 +18,7 @@ pip install -r requirements.txt
 # Set connection details (defaults: localhost:5432/postgres as postgres)
 export PGDATABASE=lore_eligibility
 export PGUSER=postgres
-export PGPASSWORD=yourpassword
+export PGPASSWORD=
 
 # Apply all migrations
 python sql-data-mapping/database/deploy.py
@@ -42,11 +42,11 @@ tech Debt:
 - ~~Running into issues with the promotion logic, had to make a lot of "patch" migrations from 12-15. Need to consolidate them.~~
 - ~~schema migration tracker and if migrations are dirty/clean~~
 - remove GCP based regions since I am not going forward with a GCP/TF build due to tokens needed for GCP (don't have enough)
-- Depending on enforcement needed I set "ENABLE ROW LEVEL SECURITY" not "FORCE ROW LEVEL SECURITY" ... This will still allow bypass of RLS for admin and migrations. In a production enviornment I would force this but generate specific users with bypass permissions on.  These users/accounts would be app specific. Being as it is and not granting my application to have table ownership these should work just fine.
-- place holder for data cleansing/ DQ function... need to add this later
-- Only promoting employee records, not dependants need to address this moving forward.
+- ~~Depending on enforcement needed I set "ENABLE ROW LEVEL SECURITY" not "FORCE ROW LEVEL SECURITY" ... This will still allow bypass of RLS for admin and migrations. In a production enviornment I would force this but generate specific users with bypass permissions on.  These users/accounts would be app specific. Being as it is and not granting my application to have table ownership these should work just fine.~~
+- ~~place holder for data cleansing/ DQ function... need to add this later~~
+- ~~Only promoting employee records, not dependants need to address this moving forward.~~
 - ~~need schema migration tracker~~
-- I need to revisit the is_crruently_eligible, looks like I have a stale data issue here.. would have to remove this.. but that would be very distruptive atm Hotfix: I could update the view?
+- ~~I need to revisit the is_crruently_eligible, looks like I have a stale data issue here.. would have to remove this.. but that would be very distruptive atm Hotfix: I could update the view?~~
 
 
 
@@ -81,7 +81,7 @@ Future state/ questions
 
 RLS:
 Application vars need set:
-SET app.partner_id = 'partner_acme';
-SET app.tenant_id = 'tenant_001';
+SET app.partner_id = 'partner_acme'; --test account
+SET app.tenant_id = 'tenant_001'; --test tenant
 SET app.org_id = 'org_hq';
 SET app.data_region = 'us-east-1';
