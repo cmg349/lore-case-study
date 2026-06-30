@@ -724,7 +724,7 @@ WHERE partner_id = 'acme-corp';
 SELECT
     vr.external_request_id,
     vd.decision_status,
-    vd.match_score,
+    vd.confidence_score,
     vd.decision_reason_code,
     vd.decided_at
 FROM eligibility.identity_verification_decision vd
