@@ -241,7 +241,7 @@ BEGIN
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         1, 'emp-001', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-001',
         'active', 'FT',
         'active', '2020-04-01',
@@ -273,7 +273,7 @@ BEGIN
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         2, 'emp-002', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-002',
         'active', 'TEMP',
         'active', '2025-10-15',
@@ -304,7 +304,7 @@ BEGIN
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         3, 'emp-003', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-003',
         'active', 'FT',
         'active', '2018-07-30',
@@ -338,7 +338,7 @@ BEGIN
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         4, 'emp-004', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-004',
         'active', 'FT',
         'active', '2022-01-10',
@@ -375,7 +375,7 @@ BEGIN
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         5, 'emp-005', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-005',
         'active',
         NULL,
@@ -531,7 +531,7 @@ BEGIN
     ) VALUES (
         v_batch2_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         1, 'emp-006', 'v1',
-        'upsert', FALSE, NULL,
+        'insert', FALSE, NULL,
         'emp-006',
         'active', 'FT',
         'active', '2026-01-10',
