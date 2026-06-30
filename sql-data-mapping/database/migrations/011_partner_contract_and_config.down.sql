@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP TRIGGER IF EXISTS trg_partner_pii_policy_updated_at
 ON eligibility.partner_pii_policy;

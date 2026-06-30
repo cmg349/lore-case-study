@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.curated_eligibility_history (
     history_id UUID NOT NULL DEFAULT gen_random_uuid(),

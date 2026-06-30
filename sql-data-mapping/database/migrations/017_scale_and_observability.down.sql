@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP PROCEDURE IF EXISTS eligibility.enforce_canonical_retention(DATE, BOOLEAN, INTEGER);
 DROP PROCEDURE IF EXISTS eligibility.sweep_expired_curated_records(DATE, INTEGER);

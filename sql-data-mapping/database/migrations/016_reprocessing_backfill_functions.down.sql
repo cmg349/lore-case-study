@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP FUNCTION IF EXISTS eligibility.reprocess_resolved_quarantine(
     TEXT,

@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE OR REPLACE FUNCTION eligibility.set_updated_at()
 RETURNS TRIGGER AS $$

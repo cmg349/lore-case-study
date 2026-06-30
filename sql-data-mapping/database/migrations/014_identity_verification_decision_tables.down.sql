@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP POLICY IF EXISTS rls_identity_verification_decision_scope
 ON eligibility.identity_verification_decision;

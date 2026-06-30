@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE OR REPLACE VIEW eligibility.v_batch_quality_summary AS
 SELECT

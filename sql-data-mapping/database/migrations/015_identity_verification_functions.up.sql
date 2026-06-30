@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE OR REPLACE FUNCTION eligibility.create_identity_verification_request(
     p_partner_id TEXT,

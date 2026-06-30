@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.eligibility_identity_token (
     identity_token_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

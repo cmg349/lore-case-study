@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP POLICY IF EXISTS rls_partner_contract_scope ON eligibility.partner_contract;
 DROP POLICY IF EXISTS rls_partner_eligibility_batch_scope ON eligibility.partner_eligibility_batch;

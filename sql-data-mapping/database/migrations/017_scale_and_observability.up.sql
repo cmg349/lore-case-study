@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE INDEX IF NOT EXISTS idx_promotion_audit_attempted_at_brin
     ON eligibility.promotion_audit USING BRIN (attempted_at)
