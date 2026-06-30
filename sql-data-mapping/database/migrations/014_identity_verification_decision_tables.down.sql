@@ -1,0 +1,30 @@
+BEGIN;
+
+DROP POLICY IF EXISTS rls_identity_verification_decision_scope
+ON eligibility.identity_verification_decision;
+
+DROP POLICY IF EXISTS rls_identity_match_candidate_scope
+ON eligibility.identity_verification_match_candidate;
+
+DROP POLICY IF EXISTS rls_identity_verification_request_scope
+ON eligibility.identity_verification_request;
+
+DROP TRIGGER IF EXISTS trg_identity_verification_decision_updated_at
+ON eligibility.identity_verification_decision;
+
+DROP TRIGGER IF EXISTS trg_identity_match_candidate_updated_at
+ON eligibility.identity_verification_match_candidate;
+
+DROP TRIGGER IF EXISTS trg_identity_verification_request_updated_at
+ON eligibility.identity_verification_request;
+
+DROP TABLE IF EXISTS eligibility.identity_verification_decision;
+DROP TABLE IF EXISTS eligibility.identity_verification_match_candidate;
+DROP TABLE IF EXISTS eligibility.identity_verification_request;
+
+DROP TYPE IF EXISTS eligibility.identity_verification_decision_status;
+DROP TYPE IF EXISTS eligibility.identity_match_candidate_status;
+DROP TYPE IF EXISTS eligibility.identity_match_strategy;
+DROP TYPE IF EXISTS eligibility.identity_verification_request_status;
+
+COMMIT;
