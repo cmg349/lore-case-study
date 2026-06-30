@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP FUNCTION IF EXISTS eligibility.promote_batch(UUID, BOOLEAN);
 DROP FUNCTION IF EXISTS eligibility.promote_canonical_record(UUID, BOOLEAN);

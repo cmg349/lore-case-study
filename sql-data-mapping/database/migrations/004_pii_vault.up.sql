@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.eligibility_person_pii (
     pii_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

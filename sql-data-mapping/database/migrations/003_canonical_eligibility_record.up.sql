@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.canonical_eligibility_record (
     eligibility_record_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

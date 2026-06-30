@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP TYPE IF EXISTS eligibility.encryption_status;
 DROP TYPE IF EXISTS eligibility.tokenization_status;

@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TYPE eligibility.contract_status AS ENUM (
     'draft',

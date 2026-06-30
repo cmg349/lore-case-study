@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DO $$
 DECLARE

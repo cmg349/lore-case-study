@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.eligibility_quarantine (
     quarantine_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 DROP TRIGGER IF EXISTS trg_curated_eligibility_current_updated_at
 ON eligibility.curated_eligibility_current;

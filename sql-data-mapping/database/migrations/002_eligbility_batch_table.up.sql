@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.partner_eligibility_batch (
     batch_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

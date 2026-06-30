@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE TABLE eligibility.curated_eligibility_current (
     curated_eligibility_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

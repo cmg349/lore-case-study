@@ -1,4 +1,4 @@
-BEGIN;
+﻿BEGIN;
 
 CREATE OR REPLACE FUNCTION eligibility.current_partner_id()
 RETURNS TEXT
