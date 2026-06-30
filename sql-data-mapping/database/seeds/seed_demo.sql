@@ -237,14 +237,16 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         1, 'emp-001', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-001',
         'active', 'FT',
         'active', '2020-04-01',
+        'not_required',
         encode(digest('emp-001|acme-corp|active|2020-04-01', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_alice_id;
@@ -269,14 +271,16 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         2, 'emp-002', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-002',
         'active', 'TEMP',
         'active', '2025-10-15',
+        'not_required',
         encode(digest('emp-002|acme-corp|active|2025-10-15', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_bob_id;
@@ -300,14 +304,16 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         3, 'emp-003', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-003',
         'active', 'FT',
         'active', '2018-07-30',
+        'not_required',
         encode(digest('emp-003|acme-corp|active|2018-07-30', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_carol_id;
@@ -334,14 +340,16 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         4, 'emp-004', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-004',
         'active', 'FT',
         'active', '2022-01-10',
+        'not_required',
         encode(digest('emp-004|acme-corp|active|2022-01-10', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_dave_id;
@@ -371,15 +379,17 @@ BEGIN
         employment_status,
         employment_type,           -- NULL: HR system did not populate this field
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         5, 'emp-005', 'v1',
-        'upsert', TRUE, '2026-01-01 00:00:00+00',
+        'snapshot', TRUE, '2026-01-01 00:00:00+00',
         'emp-005',
         'active',
         NULL,
         'active', '2024-02-20',
+        'not_required',
         encode(digest('emp-005|acme-corp|active|2024-02-20', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_eve_id;
@@ -527,14 +537,16 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch2_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
         1, 'emp-006', 'v1',
-        'upsert', FALSE, NULL,
+        'insert', FALSE, NULL,
         'emp-006',
         'active', 'FT',
         'active', '2026-01-10',
+        'not_required',
         encode(digest('emp-006|acme-corp|active|2026-01-10', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_frank_id;
@@ -724,7 +736,7 @@ WHERE partner_id = 'acme-corp';
 SELECT
     vr.external_request_id,
     vd.decision_status,
-    vd.match_score,
+    vd.confidence_score,
     vd.decision_reason_code,
     vd.decided_at
 FROM eligibility.identity_verification_decision vd
