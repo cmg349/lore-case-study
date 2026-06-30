@@ -237,6 +237,7 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -245,6 +246,7 @@ BEGIN
         'emp-001',
         'active', 'FT',
         'active', '2020-04-01',
+        'not_required',
         encode(digest('emp-001|acme-corp|active|2020-04-01', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_alice_id;
@@ -269,6 +271,7 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -277,6 +280,7 @@ BEGIN
         'emp-002',
         'active', 'TEMP',
         'active', '2025-10-15',
+        'not_required',
         encode(digest('emp-002|acme-corp|active|2025-10-15', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_bob_id;
@@ -300,6 +304,7 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -308,6 +313,7 @@ BEGIN
         'emp-003',
         'active', 'FT',
         'active', '2018-07-30',
+        'not_required',
         encode(digest('emp-003|acme-corp|active|2018-07-30', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_carol_id;
@@ -334,6 +340,7 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -342,6 +349,7 @@ BEGIN
         'emp-004',
         'active', 'FT',
         'active', '2022-01-10',
+        'not_required',
         encode(digest('emp-004|acme-corp|active|2022-01-10', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_dave_id;
@@ -371,6 +379,7 @@ BEGIN
         employment_status,
         employment_type,           -- NULL: HR system did not populate this field
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch1_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -380,6 +389,7 @@ BEGIN
         'active',
         NULL,
         'active', '2024-02-20',
+        'not_required',
         encode(digest('emp-005|acme-corp|active|2024-02-20', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_eve_id;
@@ -527,6 +537,7 @@ BEGIN
         partner_employee_id,
         employment_status, employment_type,
         eligibility_status, eligibility_start_date,
+        tokenization_status,
         record_hash
     ) VALUES (
         v_batch2_id, 'acme-corp', 'tenant-main', 'org-us', 'us-east-1',
@@ -535,6 +546,7 @@ BEGIN
         'emp-006',
         'active', 'FT',
         'active', '2026-01-10',
+        'not_required',
         encode(digest('emp-006|acme-corp|active|2026-01-10', 'sha256'), 'hex')
     )
     RETURNING eligibility_record_id INTO v_frank_id;
